@@ -12,11 +12,10 @@
                     // 取出當前網址中，最後一個 / 之後的值
                     // 以上面的範例來說，就會取道 short-url 這個值
                     let path = location.pathname.split('/').filter(e => e !== '');
-                    let routes;
-                    for(let i=1; i<path.length; i++){
-                        routes = routes[path[i]];
-                    }
                     let url = routes;
+                    for(let i=1; i<path.length; i++){
+                        url = url[path[i]];
+                    }
                     location.href = url ? url : './index.html';
                 });
         })();
