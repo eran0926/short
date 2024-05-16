@@ -6,7 +6,7 @@
     <title>Short URL App</title>
     <script type="text/javascript">
         (function () {
-            fetch('routes.json')
+            fetch('/routes.json')
                 .then(response => response.json())
                 .then(routes => {
                     // 取出當前網址中，最後一個 / 之後的值
