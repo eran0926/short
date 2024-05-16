@@ -11,8 +11,8 @@
                 .then(routes => {
                     // 取出當前網址中，最後一個 / 之後的值
                     // 以上面的範例來說，就會取道 short-url 這個值
-                    var path = location.pathname.split('/').filter(e => e !== '');
-                    var url = routes;
+                    let path = location.pathname.split('/').filter(e => e !== '');
+                    let url = routes;
                     for(let i=1; i<path.length; i++){
                         url = url[decodeURIComponent(path[i])];
                     }
