@@ -14,9 +14,8 @@
                     var path = location.pathname.split('/').filter(e => e !== '');
                     var url = routes;
                     for(let i=1; i<path.length; i++){
-                        url = url[path[i]];
+                        url = url[decodeURIComponent(path[i])];
                     }
-                    url = decodeURIComponent(url);
                     location.replace(url ? url : '/short/index.html');
                 });
         })();
